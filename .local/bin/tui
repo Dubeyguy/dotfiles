@@ -1,0 +1,10 @@
+#!/bin/bash
+# My TUI Application Launcher
+
+echo "TUI applications to launch:"
+echo "1: btop (System Monitor)"
+echo "2: gdu (Disk Usage)"
+echo "3: yazi (File Manager)"
+echo "4: synlook (Syntax lookup)"
+echo "5: hunter (rk hunter)"
+echo "6: maintain (maintenance script)"

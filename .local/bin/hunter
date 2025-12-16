@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo rkhunter --update
+sudo rkhunter --propupd
+sudo rkhunter --check

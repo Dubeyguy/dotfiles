@@ -1,0 +1,5 @@
+gtk-engine-murrine
+hyprmixer
+localsend-bin
+ttf-victor-mono
+yay-bin

@@ -1,0 +1,2 @@
+#!/bin/zsh
+ssh -i key hacker@dojo.pwn.college

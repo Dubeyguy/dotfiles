@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Check if the user provided any arguments.
+if [ "$#" -eq 0 ]; then
+  # If not, print a usage message and exit.
+  echo "Usage: synlook <topic> [subtopic]..."
+  echo "Example: synlook python loops"
+  exit 1
+fi
+
+# Join all arguments with a slash (e.g., "python loops" becomes "python/loops").
+query=$(
+  IFS=/
+  echo "$*"
+)
+
+# Make the request to cheat.sh with the formatted query.
+curl "cheat.sh/$query"

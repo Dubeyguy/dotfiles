@@ -1,0 +1,17 @@
+#!/bin/bash
+
+case "$1" in
+  --inc)
+    pamixer -i 2
+    ;;
+  --dec)
+    pamixer -d 2
+    ;;
+  --toggle)
+    pamixer -t
+    ;;
+esac
+
+# Show volume bar using wob
+volume=$(pamixer --get-volume)
+echo $volume | wob

@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+COVER="/tmp/cover.jpg"
+FILE=$(mpc --format %file% current)
+
+MUSIC_DIR=~/Music
+SONG="$MUSIC_DIR/$FILE"
+
+# Remove old cover first
+rm -f "$COVER"
+
+# Extract embedded album art (attached picture)
+ffmpeg -y -i "$SONG" -an -vcodec copy "$COVER" \
+  -map 0:v:0 -c copy -f image2 \
+  -hide_banner -loglevel error 2>/dev/null
+
+# If no embedded art, look for cover.jpg in folder
+if [ ! -s "$COVER" ]; then
+  DIR=$(dirname "$SONG")
+  if [ -f "$DIR/cover.jpg" ]; then
+    cp "$DIR/cover.jpg" "$COVER"
+  fi
+fi
+
+# Only show if cover exists
+if [ -s "$COVER" ]; then
+  ueberzugpp layer -sp <<EOF
+{
+  "action": "add",
+  "identifier": "cover",
+  "x": 2,
+  "y": 2,
+  "path": "$COVER",
+  "width": 40,
+  "height": 40
+}
+EOF
+else
+  echo "No album art found for this track."
+fi
