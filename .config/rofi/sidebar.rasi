@@ -1,0 +1,36 @@
+configuration {
+    show-icons: false;
+}
+
+window {
+    width: 350px;
+    height: 100%;
+    location: west;      /* This puts it on the left */
+    anchor: west;
+    x-offset: 60px;      /* Offsets it so it doesn't overlap your new Waybar dock */
+    background-color: rgba(30, 30, 46, 0.7); /* Frosted Glass */
+    border: 0px 2px 0px 0px;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+mainbox {
+    children: [ "listview" ];
+    background-color: transparent;
+}
+
+listview {
+    padding: 50px 20px;
+    spacing: 20px;
+    background-color: transparent;
+}
+
+element {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+element selected {
+    background-color: rgba(255, 255, 255, 0.15);
+    text-color: #cdd6f4;
+}

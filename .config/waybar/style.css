@@ -1,16 +1,18 @@
 * {
     border: none;
-    border-radius: 0;
+    /* border-radius: 15; */
     font-family: "SF Pro Display", "JetBrainsMono Nerd Font Propo";
     font-size: 16px;
     min-height: 0;
     margin: 0;
     padding: 0;
+    min-width: 10px;
 }
 
 window#waybar {
-    background: transparent;
+    background: rgba(20, 20, 20, 0.8); /* Not 0, but not 1 */
     color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 tooltip {
@@ -21,54 +23,73 @@ tooltip label {
   color: white;
 }
 
+#workspaces {
+  min-width: 0;
+  margin: 20px;
+  transition: all 0.3s ease-in-out;
+}
 #workspaces button {
-    padding: 5 8px;
-    margin: 0 2px;
-    background: transparent;
-    color: white;
-    /*background: #000000;
-    border-radius: 15px;
+    /* padding: 5 8px;
+    margin: 0 2px; */
+    margin-top: 10px;
+    min-width: 0;
+    min-height: 0;
+    border-radius: 20px;
+    background: linear-gradient(180deg, grey, white);
+    color: transparent;
+    transition: all 0.3s ease-in-out;
+
+
+    /* background: #42424a;
+    border-radius: 10px;
     */
 }
 
 #workspaces button.active{
-  font-weight: 700;
+  background: linear-gradient(180deg, gray, white);
+  color: transparent;
+  transition: all 0.3s ease-in-out;
+  font-size: 13px;
+  border-radius: 9999px;
+  min-height: 80px;
+
 }
 
 #clock {
-  padding: 0 10px;
-  margin-right: 25px;
-  /*background: #000000;
+  /* margin-bottom: 10px; */
+  /* background: #414149;
   border-radius: 15px;
   */
+  margin-top: 10px;
+  color: whitesmoke;
+  font-size: 25px;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #battery {
-  padding: 0 10px;
-  /*margin: 0 5px;
-  background: #000000;
+  margin-bottom: 20px;
+  font-size: 15px;
+  /* background: #42424a;
   border-radius: 15px;
-  */ 
+   */
 }
 
 #pulseaudio{
-  padding: 0 10px;
-  /*margin-left: 5px;
-  background: #000000;
+  margin-bottom: 15;
+  font-size: 15px;
+  /* padding: 0 10px;
+  margin-left: 5px; */
+  /* background: #42424a;
   border-radius: 15px;
-  */ 
+   */
 }
 
 #network{
-  padding: 0 10px;
-  /*background: #000000;
+  margin-bottom: 15;
+  font-size: 15px;
+  /* padding: 0 10px; */
+  /* background: #42424a;
   border-radius: 15px;
-  */
-}
-
-#window{
-  padding: 0 10px;
-  /*background: #000000;
-  border-radius: 15px;
-  */
+   */
 }

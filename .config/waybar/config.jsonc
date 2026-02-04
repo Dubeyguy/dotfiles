@@ -1,21 +1,34 @@
 {
+    "position": "left",
     "layer": "top",
-    "margin-top": 5,
-    "margin-left": 15,
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["network", "pulseaudio", "battery", "clock"],
+    "width": 40,
+    "margin-top": 17,
+    "margin-bottom":17,
+    "margin-left": 10,
+    "modules-left": ["clock"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["network", "pulseaudio", "battery"],
+    
     "battery": {
-        "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""]
-    },
+      "states": {
+        "warning": 30,
+        "critical": 15
+      },
+      "format":"{icon}",
+      "format-plugged":"",
+      "format-alt":"{icon}",
+      "format-charging": "",
+      "format-icons": ["", "", "", "", ""]},
+
     "clock": {
-        "format-alt": "{:%a, %d. %b  %H:%M}"
+        // "format-alt": "{:%a, %d. %b  %H:%M}"
+        "format": "{:%H\n%M}", // Uses a newline to stack numbers
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
 
   "pulseaudio": {
-    "format": "{volume}% {icon}",
-    "format-bluetooth": "{volume}% {icon}",
+    "format": "{icon}",
+    "format-bluetooth": "{icon}",
     "format-muted": "",
     "format-icons": {
         "headphone": "",
@@ -28,9 +41,10 @@
     "ignored-sinks": ["Easy Effects Sink"]
 },
   "network": {
-    "interface": "wlp62s0",
+    "interface": "wl*",
     "format": "{ifname}",
-    "format-wifi": "{essid} ",
+    // "format-wifi": "{essid} ",
+    "format-wifi": "",
     "format-ethernet": "{ipaddr}/{cidr} 󰊗",
     "format-disconnected": "", //An empty format will hide the module.
     "tooltip-format": "{ifname} via {gwaddr} 󰊗",
@@ -40,13 +54,18 @@
     "max-length": 50
 },
   "hyprland/workspaces": {
-	"format": "{name}",
+	"format": "{id}",
+  "on-click": "activate",
+  // "on-scroll-up": "hyprctl dispatch workspace e-1",
+  // "on-scroll-down": "hyprctl dispatch workspace e+1",
+  "orientation": "vertical",
+
        "persistent-workspaces": {
              "*": 3,
        }
-},
-  
-
-
-
 }
+  
+}
+
+
+

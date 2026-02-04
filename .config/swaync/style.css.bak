@@ -1,0 +1,87 @@
+/* Main Window Background */
+.control-center {
+  background: #1e1e2e; /* Example: Catppuccin Mocha base */
+  border-radius: 12px;
+  border: 2px solid #cba6f7; /* Example: Mauve border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Title Widget */
+.widget-title {
+  color: #cdd6f4;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.widget-title > button {
+  background: #313244;
+  color: #cdd6f4;
+  border: none;
+  box-shadow: none;
+  border-radius: 8px;
+}
+
+/* Media Player (MPRIS) */
+.widget-mpris {
+  background: #313244;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 12px;
+}
+
+.widget-mpris-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.widget-mpris-subtitle {
+  font-size: 1rem;
+}
+
+/* Toggles Grid (WiFi/BT) */
+.widget-buttons-grid {
+  font-size: 1.2rem;
+  margin: 10px;
+  padding: 5px;
+  background: #313244;
+  border-radius: 12px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  background: #45475a;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 10px 20px;
+}
+
+/* Sliders (Volume/Backlight) */
+.widget-volume, .widget-backlight {
+  background: #313244;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 12px;
+}
+
+/* Slider Track Styling */
+.widget-volume trough, .widget-backlight trough {
+  background: #45475a;
+  border-radius: 8px;
+  min-height: 10px;
+}
+
+.widget-volume highlight, .widget-backlight highlight {
+  background: #89b4fa; /* Blue accent */
+  border-radius: 8px;
+}
+
+/* Notifications */
+.notification-row {
+  outline: none;
+  margin: 5px;
+}
+
+.notification {
+  background: #313244;
+  border-radius: 12px;
+  padding: 10px;
+}
