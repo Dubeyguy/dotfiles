@@ -2,4 +2,6 @@
 
 ## Follow these steps to replicate my setup
 - Clone my git repository
-  ``` git clone https://github.com/Dubeyguy/dotfiles.git ```
+  ```bash
+  git clone https://github.com/Dubeyguy/dotfiles.git
+  ```
