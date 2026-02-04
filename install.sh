@@ -9,9 +9,16 @@ echo "--- Installing Essentials ---"
 sudo pacman -S --noconfirm git stow
 
 # 3. Install Native Packages from list
-echo "--- Installing Native Packages ---"
-# This reads the list and installs missing packages
-sudo pacman -S --needed --noconfirm - <pkglist.txt
+echo "--- Installing Core Packages ---"
+
+# Install core dependencies first
+sudo pacman -S - < packages/core-pkglist.txt
+
+# Ask before installing personal apps
+read -p "Install user-specific applications? (y/n) " -n 1 -r
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    sudo pacman -S - < packages/personal-pkglist.txt
+fi
 
 # 4. Install Yay (AUR Helper) if not present
 if ! command -v yay &>/dev/null; then

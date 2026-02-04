@@ -1,0 +1,32 @@
+# --- The Basics ---
+hyprland              # The compositor itself
+kitty                 # Default terminal (or replace with alacritty/foot)
+waybar                # Status bar
+rofi-wayland          # App launcher (or wofi)
+dunst                 # Notification daemon (or mako)
+swaync
+
+# --- System & Hardware ---
+pipewire              # Audio server
+pipewire-pulse        # PulseAudio compatibility
+wireplumber           # Session manager for PipeWire
+network-manager-applet # GUI for Wi-Fi in the bar
+blueman               # GUI for Bluetooth
+brightnessctl         # Screen brightness control
+
+# --- Essential Utilities ---
+wl-clipboard          # Clipboard support (crucial for copy/paste)
+grim                  # Screenshot tool
+slurp                 # Select region for screenshot
+swww                  # Wallpaper utility
+hyprlock              # Screen locker
+hypridle              # Idle management daemon
+polkit-gnome          # Authentication agent (needed for GUI sudo prompts)
+
+# --- Look & Feel (Fonts & Themes) ---
+ttf-jetbrains-mono-nerd # Standard font for terminal/coding
+noto-fonts            # Fallback font for general UI
+noto-fonts-emoji      # Emoji support
+qt5-wayland           # Wayland support for Qt5 apps
+qt6-wayland           # Wayland support for Qt6 apps
+nwg-look              # GTK3 settings editor (helps fix theme issues)

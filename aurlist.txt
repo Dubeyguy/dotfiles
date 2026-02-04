@@ -5,11 +5,8 @@ hyprmixer
 hyprshot
 librewolf-bin
 localsend-bin
-mpvpaper
 superfile
 swayosd
 swww
 ttf-victor-mono
-waypaper-git
 yay-bin
-zen-browser-bin
